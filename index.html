@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>鸡兔同笼</title>
+		<link rel="stylesheet" href="http://www.bootcss.com/p/buttons/css/buttons.css">
+	</head>
+	<center id="b">
+		<input type="number" id="head" placeholder="头"/>
+		<br/>
+		<input type="number" id="foot" placeholder="脚"/>
+		<br />
+		<input type="button" onclick="ccccc()" value="计算" class="button button-glow button-rounded button-highlight"/>
+	</center>
+	<center id="a">
+		
+	</center>
+		<script>
+			function ccccc() {
+				var a=document.getElementById("a");
+				var b=document.getElementById("b");
+				var head = document.getElementById("head").value;
+				var foot = document.getElementById("foot").value;
+				var chicken_head = 0;
+				var rabbit_head = 0;
+				for ( chicken_head = 0; chicken_head <= head; chicken_head++) {
+					rabbit_head = head - chicken_head;
+					if (2 * chicken_head + 4 * rabbit_head == foot) {
+						a.innerHTML="鸡有" + chicken_head + "只" + "</br>"+"兔有" + rabbit_head + "只";
+						b.style.display="none";
+					}
+				}
+			}
+
+		</script>
+</html>
