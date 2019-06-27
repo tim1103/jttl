@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>鸡兔同笼</title>
+		<script src="https://sweetalert.js.org/assets/sweetalert/sweetalert.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://sweetalert.js.org/assets/css/app.css" />
 		<style>
 /*! @license
 *
@@ -1516,13 +1518,9 @@ var _hmt = _hmt || [];
 		<br />
 		<input type="button" onclick="ccccc()" value="计算" class="button button-glow button-rounded button-highlight"/>
 	</center>
-	<center id="a">
-		
-	</center>
 		<script>
 			function ccccc() {
 				var a=document.getElementById("a");
-				var b=document.getElementById("b");
 				var head = document.getElementById("head").value;
 				var foot = document.getElementById("foot").value;
 				var chicken_head = 0;
@@ -1531,7 +1529,7 @@ var _hmt = _hmt || [];
 					rabbit_head = head - chicken_head;
 					if (2 * chicken_head + 4 * rabbit_head == foot) {
 						a.innerHTML="鸡有" + chicken_head + "只" + "</br>"+"兔有" + rabbit_head + "只";
-						b.style.display="none";
+                                                swal("计算完毕!", "鸡有" + chicken_head + "只" + ","+"兔有" + rabbit_head + "只", "success");
 					}
 				}
 			}
